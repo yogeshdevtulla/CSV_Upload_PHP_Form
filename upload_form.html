@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSV</title>
+    <style type="text/css">
+    
+
+        input[type=file],
+        select {
+            font-size: 20px;
+            font-family: 'Lora', serif;
+            width: 500px;
+            padding: 20px 90px;
+            margin: 10px 200px;
+            display: inline-block;
+            
+    border: 3px solid #8a52a9;
+            border-style: inset;
+            border-radius: 10px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        input[type=submit],
+        select {
+            font-size: 16px;
+            font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif;
+            background-image: linear-gradient(to top, #d0b330 0%, #793bc5 100%);
+            min-width: 140px;
+            min-height: 43px;
+            padding: 9px 20px;
+            margin: 30px 350px;
+            text-align: center;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        input[type=submit]:hover {
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+        }
+
+        div.container {
+            height: 500px;
+            /* width: 1500px; */
+            /* position: absolute;  */
+            margin: auto;
+            margin-top: 150px;
+            width: 50%;
+            border: 3px solid #8a52a9;;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+    color: #310e44;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    
+        }
+    </style>
+    </style>
+</head>
+
+<body style="margin: 0px;">
+    <div class="container">
+        <h1>Upload a CSV file</h1>
+        <br>
+
+        <!-- <tr style="background:black;color:white;    height: 35px;    font-style: oblique;    font-weight: 600;">
+        <td>Campaign</td><td>Network</td><td>Agent</td> <td>Affiliate Id</td><td>Offer Id</td> <td>Offer Status</td> <td>CR(today//yesterday//yesterday2)</td> <td>Conversion</td> <td>Revenue</td><td> Cap </td></tr> -->
+        <form action="process_upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="csvfile" id="fileToUpload">
+            <input type="submit" value="Upload File" name="submit">
+        </form>
+    </div>
+</body>
+
+</html>
